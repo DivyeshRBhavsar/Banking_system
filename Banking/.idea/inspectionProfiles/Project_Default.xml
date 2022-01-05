@@ -1,0 +1,14 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Banking.signup.models.*" />
+          <option value="django.contrib.auth.models.User.DoesNotExist" />
+          <option value="Banking.home.models.signup.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

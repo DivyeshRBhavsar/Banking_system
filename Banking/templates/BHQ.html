@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ahmedabad Bank</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+
+
+        <!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        {% include 'after_header.html' %}
+
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static 'images/123.jpg'%}" alt="Service">
+                                <h3>Branch Deposits</h3>
+                                <p>
+                                    It is having the Deposits of all branches.
+                                </p>
+                                <a class="btn" href="{% url 'Deposits'  %}">Enter</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static 'images/pic3.jpg' %}" alt="Service">
+                                <h3>Branch Dashboard</h3>
+                                <p>
+                                    Sheet of total deposit amount of all branches.
+                                </p>
+                                <a class="btn" href="{% url 'Balanceprocess' %}">Enter</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static 'images/pic4.jpg' %}" alt="Service">
+                                <h3>Branch Efficiency</h3>
+                                <p>
+                                    The Ranking of Branches W.R.T no of loan and no of customers.
+                                </p>
+                                <a class="btn" href="{% url 'branch_efficiency' %}">Enter</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="{% static 'images/pic5.jpg' %}" alt="Service">
+                                <h3>Branch surplus Analysis</h3>
+                                <p>
+                                    Display analysis of each branch's surplus and their weak dates.
+                                </p>
+                                <a class="btn" href="{% url 'surplus'%}">Enter</a>
+                            </div>
+                        </div>
+
+            <!-- Service End -->
+            
+            
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature End -->
+
+            
+            <!-- Pricing Plan Start -->
+            <div class="price">
+                <div class="container">
+                    <div class="section-header">
+
+                        <h2>Other options...</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="price-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+
+                                                                            </div>
+                                    <div class="price-title">
+                                        <h2>Update feed</h2>
+                                    </div>
+
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>The form </li>
+                                            <li>for updating</li>
+                                            <li>feed of</li>
+                                            <li>every branch</li>
+                                            <li>in feeds</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="{% url 'BHQfeed' %}">Update feed</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="price-item featured-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>Complains</h2>
+                                    </div>
+
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>The dashboard</li>
+                                            <li>for viewing</li>
+                                            <li>Every branches </li>
+                                            <li>complains </li>
+                                            <li>and requests</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="{% url 'notification' %}">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="price-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>Request Form</h2>
+                                    </div>
+
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>The form</li>
+                                            <li>for requesting</li>
+                                            <li>any documents</li>
+                                            <li>or sheets</li>
+                                            <li>from any branches</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="{% url 'request1' %}">Request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing Plan End -->
+
+
+           {% include 'footer.html' %}
+
+        <!-- JavaScript Libraries -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Update any field</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css1">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+        <!-- Template Stylesheet -->
+
+        <style>
+body {
+	color: #999;
+	background: #f3f3f3;
+	font-family: 'Roboto', sans-serif;
+}
+.form-control {
+	border-color: #eee;
+	min-height: 41px;
+	box-shadow: none !important;
+}
+.form-control:focus {
+	border-color: #5cd3b4;
+}
+.form-control, .btn {
+	border-radius: 3px;
+}
+.signup-form {
+	width: 500px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.signup-form h2 {
+	color: #333;
+	margin: 0 0 30px 0;
+	display: inline-block;
+	padding: 0 30px 10px 0;
+	border-bottom: 3px solid #5cd3b4;
+}
+.signup-form form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.signup-form .form-group row {
+	margin-bottom: 20px;
+}
+.signup-form label {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+.signup-form input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+}
+.signup-form .btn {
+	font-size: 16px;
+	font-weight: bold;
+	background: #5cd3b4;
+	border: none;
+	margin-top: 20px;
+	min-width: 140px;
+}
+.signup-form .btn:hover, .signup-form .btn:focus {
+	background: #41cba9;
+	outline: none !important;
+}
+.signup-form a {
+	color: #5cd3b4;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: #5cd3b4;
+	text-decoration: none;
+}
+.signup-form form a:hover {
+	text-decoration: underline;
+}
+</style>
+
+
+
+        <!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+
+    </head>
+
+    <body>
+          <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="{% url 'sheetdone'%}">
+                                    <h2> Ahmedabad Bank</h2>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>bankinghelp@gmail.co.in</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+
+                                        <a class="btn" href="{% url 'bm_profile' %}">Greetings BM({{branch}})</a>
+                                        <a href="{% url 'logoutprocess'%}" class="btn">Log out</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>BM({{branch}})</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          </div>
+
+            <!-- Page Header End -->
+
+
+            <!-- Page Header Start -->
+
+            <!-- Page Header End -->
+
+
+          <div class="signup-form">
+    <form action="{% url 'sheetprocess' %}" method="post" class="form-horizontal">
+
+        {% csrf_token %}
+      	<div class="row">
+
+				<h2>Upload a sheet</h2>
+
+      	</div>
+
+
+
+        <a style="color:red">{{error}}</a><br>
+        <a>{{prompt}}</a>
+        <div class="form-group row">
+			<label class="col-form-label col-4">Employee ID</label>
+			<div class="col-8">
+                <input type="text" class="form-control" id="emp_id" name="emp_id" required="required">
+            </div>
+        </div>
+
+
+
+		<div class="form-group row">
+
+
+				<button type="submit" class="btn btn-primary btn-lg">Upload</button>
+
+		</div>
+    </form>
+
+</div>
+
+
+
+
+
+
+          <div class="footer">
+
+
+
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help & FQAs</a>
+                        <a href="">Contact us</a>
+                    </div>
+                </div>
+          </div>
+
+        <!-- JavaScript Libraries -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </body>
+</html>
+

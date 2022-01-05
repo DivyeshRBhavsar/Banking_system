@@ -1,0 +1,36 @@
+  <section class="search-sec">
+    <div class="container">
+        <form action="{% url 'surplus' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <label class="form-control search-slt" style="font-weight:bold;"> Search for Date(more debits done)</label>
+                        </div>
+                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="OR" name="OR">
+                                <option name="none">Select Branch</option>
+                                <option name="bapu" value="Bapunagar">Bapunagar</option>
+                                <option name="bop" value="Bopal">Bopal</option>
+                                <option name="cha" value="Chandkheda">Chandkheda</option>
+                                <option name="gan" value="Gandhinagar">Gandhinagar</option>
+                                <option name="got" value="Gota">Gota</option>
+                                <option name="isa" value="Isanpur">Isanpur</option>
+                                <option name="lal" value="Lal Darwaja">Lal Darwaja</option>
+                                <option name="man" value="Maninagar">Maninagar</option>
+                                <option name="vas" value="Vastral">Vastral</option>
+                            </select>
+                        </div>
+                          <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                              <output  class="form-control search-slt" id="answer">{{OR}} = {{Ans_bop}}</output>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <button  class="btn btn-primary wrn-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </form>
+    </div>
+</section>

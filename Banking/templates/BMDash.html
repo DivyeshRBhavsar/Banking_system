@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Update any field</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css1">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+        <!-- Template Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+        <style>
+   .project-tab {
+    padding: 10%;
+    margin-top: -8%;
+}
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
+}
+.project-tab #tabs h6.section-title{
+    color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0062cc;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+    font-size: 16px;
+    font-weight: 600;
+}
+.project-tab .nav-link:hover {
+    border: none;
+}
+.project-tab thead{
+    background: #f3f3f3;
+    color: #333;
+}
+.project-tab a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+</style>
+
+    </head>
+
+    <body>
+           <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="{% url 'sheetdone'%}">
+                                    <h2 style="color:white"> Ahmedabad Bank</h2>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890" style="color:white"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com" style="color:white"><i class="fa fa-envelope"></i>bankinghelp@gmail.co.in</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+
+                                       <a class="btn" href="{% url 'bm_profile' %}">Greetings BM({{branch}})</a>
+                                        <a href="{% url 'logoutprocess'%}" class="btn">Log out</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                             <h2>BM({{branch}})</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+           </div>
+
+            <section id="tabs" class="project-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">{{branch}} Branch Customers vs Loans</a>
+                                <a class="nav-item nav-link " id="nav-date-tab" data-toggle="tab" href="#nav-date" role="tab" aria-controls="nav-date" aria-selected="true">{{branch}} Branch Customers vs Deposits</a>
+                                                            </div>
+                        </nav><div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                               <div class="" style=''>
+                                   {% autoescape off %}
+                              {{ BMdash }}
+                            {% endautoescape %}
+
+                            </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-date" role="tabpanel" aria-labelledby="nav-date-tab">
+                                <div class="" style=''>
+                                    {% autoescape off %}
+                              {{ BMdash1 }}
+                            {% endautoescape %}
+                            </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+          <div class="footer">
+
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help & FQAs</a>
+                        <a href="">Contact us</a>
+                    </div>
+                </div>
+          </div>
+
+        <!-- JavaScript Libraries -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script>
+                $(document).ready(function() {
+    $('body').bootstrapMaterialDesign();
+    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+});
+                </script>
+
+
+
+</body>
+
+</html>
+

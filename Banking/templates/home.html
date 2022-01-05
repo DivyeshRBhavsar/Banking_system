@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml" xmlns:background-color="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <title>Ahmedabad Bank</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+
+
+        <!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            {% include 'header.html' %}
+
+            <div class="hero row align-items-center">
+                        <div class="col-md-7">
+                            <h2>Banking</h2>
+
+                            <p>Investment Banking fees are geared <br> towards success...</p>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form">
+                                <h3 align="center">Login</h3>
+                                <form action="{% url 'loginprocess' %}" method="POST">
+                                    {% csrf_token %}
+
+  		                            {{message}}
+                                    <br>
+
+                                    <div class="btn-group" data-toggle="buttons">
+
+
+                                    <select id="IR" name="IR">
+                                        <option name="IR0" value="Select">Select</option>
+                                      <option name="IR1"value="Bank HQ">Bank HQ</option>
+
+                                      <option name="IR2" value="Branch Manager">Branch Manager</option>
+
+                                    </select>
+
+
+
+                                    </div>
+                                    <br>
+
+                                    <input class="form-control" name="emp_id" type="text" placeholder="Employee ID">
+                                   <input class="form-control" name="password" type="password" placeholder="Password">
+
+                                    <button class="btn btn-block">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- About Start -->
+            <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+
+                                <img src="{% static 'images/pic1.jpg'%}" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="about-text">
+                                <h2>Bank Overview</h2>
+                                <p>
+                                    Ahmedabad Bank is one of India’s leading private banks and was among the first to receive approval from the Reserve Bank of India (RBI) to set up a private sector bank in 1994.
+                                </p>
+                                <p>
+                                    Today, Ahmedabad Bank has a banking network of 5,430 branches and 15,292 ATMs spread across 2,848 cities and towns.</p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+
+
+            <!-- Footer Start -->
+            {% include 'footer.html' %}
+
+            <!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+
+
+        <!-- Template Javascript -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    </body>
+</html>

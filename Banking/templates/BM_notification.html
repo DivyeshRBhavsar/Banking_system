@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Update any field</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css1">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+        <!-- Template Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+        <style>
+        .container1{
+        width:100%;
+
+
+
+        }
+        .container h3{
+    font-size:25px ;
+    margin-top: 20px ;
+    margin-bottom: 10px ;
+    font-weight: 300 ;
+    color: #3c4858 ;
+    width:500px;
+}
+.container h4{
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+    font-weight: 300;
+    color: #3c4858;
+    width:500px;
+}
+
+            .btn-group{
+    position: relative;
+    margin: 10px 1px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.btn-group .btn{
+    padding: 6.5px 20px !important;
+}
+.btn.btn-round{
+    border-radius: 30px !important;
+}
+
+.btn-group .btn.btn-round{
+    border-radius: 30px !important;
+}
+
+ .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.btn-group>.btn:not(:first-child) {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.btn{
+    padding: 12px 30px !important;
+    margin: 5px 1px;
+    font-size: 12px !important;
+    box-shadow: 0 2px 2px 0 hsla(0,0%,60%,.14), 0 3px 1px -2px hsla(0,0%,60%,.2), 0 1px 5px 0 hsla(0,0%,60%,.12);
+}
+.btn .material-icons{
+    position: relative;
+    display: inline-block;
+    top: 0;
+    margin-top: -1.2em;
+    margin-bottom: -1em;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.btn.btn-sm{
+    border-radius:3px !important;
+}
+
+.btn.btn-just-icon.btn-sm {
+    height: 30px;
+    min-width: 30px;
+    width: 30px;
+}
+
+.btn.btn-just-icon {
+    font-size: 24px;
+    height: 41px;
+    min-width: 41px;
+    width: 41px;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+    line-height: 41px;
+}
+
+.btn.btn-just-icon.btn-round {
+    border-radius: 50% !important;
+}
+
+.btn.btn-link{
+    background: transparent;
+    box-shadow: none;
+    color: #999;
+}
+
+.btn.btn-info {
+    color: #fff !important;
+    background-color: #00bcd4 !important;
+    border-color: #00bcd4;
+    box-shadow: 0 2px 2px 0 rgba(0,188,212,.14),
+                0 3px 1px -2px rgba(0,188,212,.2),
+                0 1px 5px 0 rgba(0,188,212,.12) !important;
+}
+
+.btn.btn-info:hover {
+    box-shadow: 0 14px 26px -12px rgba(0,188,212,.42),
+                0 4px 23px 0 rgba(0,0,0,.12),
+                0 8px 10px -5px rgba(0,188,212,.2) !important;
+    background: #00aec5 !important;
+}
+
+.btn.btn-info.btn-link{
+    background-color: transparent !important;
+    color: #00bcd4 !important;
+    box-shadow:none !important;
+}
+.btn.btn-success {
+    color: #fff !important;
+    background-color: #4caf50 !important;
+    border-color: #4caf50;
+    box-shadow: 0 2px 2px 0 rgba(76,175,80,.14),
+                0 3px 1px -2px rgba(76,175,80,.2),
+                0 1px 5px 0 rgba(76,175,80,.12) !important;
+}
+
+.btn.btn-success:hover {
+    box-shadow: 0 14px 26px -12px rgba(76,175,80,.42),
+                0 4px 23px 0 rgba(0,0,0,.12),
+                0 8px 10px -5px rgba(76,175,80,.2) !important;
+    background: #47a44b  !important;
+}
+.btn.btn-success.btn-link{
+    background-color: transparent !important;
+    color: #4caf50 !important;
+    box-shadow: none !important;
+}
+
+.btn.btn-danger {
+    color: #fff !important;
+    background-color: #f44336 !important;
+    border-color: #f44336;
+    box-shadow: 0 2px 2px 0 rgba(244,67,54,.14),
+                0 3px 1px -2px rgba(244,67,54,.2),
+                0 1px 5px 0 rgba(244,67,54,.12) !important;
+}
+
+.btn.btn-danger:hover {
+    box-shadow: 0 14px 26px -12px rgba(244,67,54,.42),
+                0 4px 23px 0 rgba(0,0,0,.12),
+                0 8px 10px -5px rgba(244,67,54,.2) !important;
+    background-color: #f33527 !important;
+
+}
+
+.btn.btn-danger.btn-link{
+    background-color: transparent !important;
+    color: #f44336 !important;
+    box-shadow: none !important;
+}
+.btn.btn-just-icon .material-icons {
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    line-height: 41px;
+    font-size: 20px;
+}
+
+.btn.btn-just-icon.btn-sm .material-icons {
+     font-size: 17px;
+     line-height: 29px;
+}
+
+
+        </style>
+
+
+
+
+    </head>
+
+    <body>
+           <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="{% url 'sheetdone'%}">
+                                    <h2 style="color:white"> Ahmedabad Bank</h2>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890" style="color:white"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com" style="color:white"><i class="fa fa-envelope"></i>bankinghelp@gmail.co.in</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+
+                                       <a class="btn" href="{% url 'bm_profile' %}">Greetings BM({{branch}})</a>
+                                        <a href="{% url 'logoutprocess'%}" class="btn">Log out</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                             <h2>BM({{branch}})</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+           </div>
+            <!-- Page Header End -->
+
+            <!-- Page Header End -->
+
+
+            <!-- Page Header Start -->
+
+            <!-- Page Header End -->
+
+
+          <div class="container1">
+    	<div class="title">
+
+    	</div>
+    	<div class="row">
+
+            <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+            <h4 style="font-weight:bold;"><small>Notifications:</small></h4>
+                <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Employee ID</th>
+
+                            <th>Branch</th>
+                            <th>Subject</th>
+                            <th class="text-right">Issues</th>
+                            <th class="text-right">Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in data_m %}
+
+                        <tr>
+                            <td>{{item.id}}</td>
+
+                            <td class="text-center">{{item.empid}}</td>
+
+                            <td>{{item.branch}}</td>
+
+                            <td>{{item.subject}}</td>
+
+
+
+                            <td class="text-right">{{item.request}}</td>
+                            <td class="td-actions text-right">
+
+                                <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">edit</i>
+                                </button>
+                                <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="">
+                                    <i class="material-icons">close</i>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                              </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+          </div>
+
+
+
+
+
+
+          <div class="footer">
+
+
+
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help & FQAs</a>
+                        <a href="">Contact us</a>
+                    </div>
+                </div>
+          </div>
+
+        <!-- JavaScript Libraries -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script>
+                $(document).ready(function() {
+    $('body').bootstrapMaterialDesign();
+    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+});
+                </script>
+
+
+
+</body>
+
+</html>
+

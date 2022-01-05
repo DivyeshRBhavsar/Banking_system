@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>CleanMe - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+
+
+
+
+        <!-- Template Stylesheet -->
+        {% load static%}
+        <link href="{% static './style.css'%}" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <a href="{% url 'home'%}">
+                                    <h2> Ahmedabad Bank</h2>
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>bankinghelp@gmail.co.in</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="{% url 'home'%}" class="nav-item nav-link active">Home</a>
+                                        <a href="{%url 'feed'%}" class="nav-item nav-link">Feeds</a>
+
+                                        <a href="{% url 'show_signup'%}" class="btn">Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        <div class="wrapper">
+            <!-- Header Start -->
+
+
+
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>New Feeds</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="">Home</a>
+                            <a href="">Feeds</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Page Header End -->
+
+
+            <!-- About Start -->
+   <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+
+                                <div class="" style=''>
+                                   {% autoescape off %}
+                              {{ customer }}
+                            {% endautoescape %}
+
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="about-text">
+                                <h2>Updated year of Customer Ratio</h2>
+                                <p >
+                                    Ahmedabad Bank is one of India’s leading private banks and was among the first to receive approval from the Reserve Bank of India (RBI) to set up a private sector bank in 1994.
+                                </p>
+                                <p >
+                                    Today, Ahmedabad Bank has a banking network of 5,430 branches and 15,292 ATMs spread across 2,848 cities and towns.</p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+             <div class="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                           <div class="about-text">
+                                <h2 >Updated year of Loans ratio</h2>
+                                <p >
+                                    Ahmedabad Bank is one of India’s leading private banks and was among the first to receive approval from the Reserve Bank of India (RBI) to set up a private sector bank in 1994.
+                                </p>
+                                <p >
+                                    Today, Ahmedabad Bank has a banking network of 5,430 branches and 15,292 ATMs spread across 2,848 cities and towns.</p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                             <div class="about-img">
+
+                                <div class="" style=''>
+                                   {% autoescape off %}
+                              {{ loans }}
+                            {% endautoescape %}
+
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team End -->
+
+
+            <!-- Footer Start -->
+           {% include 'footer.html'%}
+            <!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        {% load static %}
+        <script src="{% static './main.js'%}"></script>
+           <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Template Javascript -->
+
+    </body>
+</html>
+
